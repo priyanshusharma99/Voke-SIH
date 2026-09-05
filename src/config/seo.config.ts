@@ -340,22 +340,22 @@ export const PUBLIC_ROUTES_REGISTRY: Record<string, RouteSEOInput> = {
         ]
       })
   },
-  "/community": {
-    path: "/community",
-    title: "Tech Student & Job Seeker Community Hub – Voke",
+  "/curriculum-gap": {
+    path: "/curriculum-gap",
+    title: "Curriculum-Gap Dashboard for Institutions & Colleges – Voke",
     description:
-      "Connect with B.Tech students and tech job seekers. Share interview experiences, study strategies, peer practice feedback, and career guidance.",
-    keywords: ["tech community", "interview experience sharing", "B.Tech placement forum", "peer mock practice"],
-    changefreq: "daily",
-    priority: 0.7,
+      "Pinpoint engineering syllabus deficits against 2025/2026 tech hiring benchmarks. Executive curriculum gap analysis, job role readiness, and turnkey bridge modules for institutions.",
+    keywords: ["curriculum gap analysis", "engineering syllabus audit", "college placement readiness", "institutional tech benchmark", "board of studies curriculum bridge"],
+    changefreq: "weekly",
+    priority: 0.8,
     structuredData: (canonicalUrl) =>
       createPageSchemaGraph({
         canonicalUrl,
-        pageName: "Candidate & Student Community Hub",
-        pageDescription: "Connect with tech job seekers and B.Tech students.",
+        pageName: "Curriculum-Gap Dashboard for Institutions",
+        pageDescription: "Audit college engineering curricula against real industry hiring criteria.",
         breadcrumbs: [
           { name: "Home", url: SITE_URL },
-          { name: "Community", url: "/community" }
+          { name: "Curriculum Gap", url: "/curriculum-gap" }
         ]
       })
   },
