@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6106K1D9YZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6106K1D9YZ');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09090b" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdn.pyodide.org https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https: http:; connect-src 'self' https: wss: http:; media-src 'self' blob: https:; worker-src 'self' blob:; frame-src 'self' https:;" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Primary SEO -->
+    <title>Voke – AI Mock Interview Platform for Software Engineers & Tech Students</title>
+    <meta name="description" content="Practice realistic AI mock interviews with instant voice & video feedback, resume-tailored technical questions, live coding practice, and system design rounds. Built for B.Tech CSE students, campus placements, and software engineers." />
+    <meta name="author" content="Voke" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="AI mock interview, AI mock interview platform, technical mock interview online, AI coding mock interview, AI mock interview for BTech CSE students, campus placement mock interview preparation, technical interview practice for freshers, Google coding mock interview practice, Amazon SDE mock interview AI, voice and video AI interview practice, resume based mock interview AI, system design mock interview practice" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.tryvoke.in/" />
+
+    <!-- Favicon & Asset Preloads for LCP Optimization -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Font Preconnect & Optimization for CLS & LCP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
+    <meta property="og:title" content="Voke – AI Mock Interview Platform for Software Engineers & Tech Students" />
+    <meta property="og:description" content="Practice realistic AI mock interviews with voice and video feedback, resume-tailored technical questions, and coding challenges." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.tryvoke.in/" />
+    <meta property="og:site_name" content="Voke" />
+    <meta property="og:image" content="https://www.tryvoke.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Voke – AI Mock Interview Platform" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Voke – AI Mock Interview Platform" />
+    <meta name="twitter:description" content="Practice AI mock interviews with real-time voice, video, and coding evaluation tailored to your resume." />
+    <meta name="twitter:image" content="https://www.tryvoke.in/og-image.png" />
+    <meta name="twitter:site" content="@tryvoke" />
+    <meta name="twitter:creator" content="@tryvoke" />
+
+    <!-- Structured Data (JSON-LD) for Google Rich Results -->
+    <script id="voke-json-ld" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Voke",
+      "url": "https://www.tryvoke.in/",
+      "description": "AI-powered mock interview and technical preparation platform for software engineers and B.Tech CSE students.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Voke",
+        "url": "https://www.tryvoke.in"
+      }
+    }
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          if (stored === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+            if (!stored) localStorage.setItem('theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:bg-violet-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-xl focus:outline-none">
+      Skip to main content
+    </a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

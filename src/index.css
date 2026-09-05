@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+/* Fix for Monaco Editor textarea becoming visible (White Box bug) due to Tailwind */
+.monaco-editor textarea,
+.monaco-editor textarea.inputarea {
+  resize: none !important;
+  background-color: transparent !important;
+  color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@layer base {
+  :root {
+    --background: 38 42% 93.5%;
+    --foreground: 28 20% 14%;
+
+    --card: 38 36% 97.5%;
+    --card-foreground: 28 20% 14%;
+
+    --popover: 38 36% 97.5%;
+    --popover-foreground: 28 20% 14%;
+
+    --primary: 215 85% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 75% 50%;
+    --secondary-foreground: 215 85% 28%;
+
+    --muted: 36 28% 88%;
+    --muted-foreground: 30 12% 40%;
+
+    --accent: 36 28% 89%;
+    --accent-foreground: 28 20% 14%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 22% 83%;
+    --input: 36 22% 83%;
+    --ring: 215 85% 28%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens for AI Interview platform */
+    --gradient-hero: linear-gradient(135deg, hsl(215, 85%, 28%) 0%, hsl(195, 80%, 35%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(38, 36%, 97.5%) 0%, hsl(38, 42%, 93.5%) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(30, 30%, 25%, 0.06);
+    --shadow-medium: 0 10px 40px -5px hsl(30, 30%, 25%, 0.10);
+    --shadow-strong: 0 20px 60px -10px hsl(30, 30%, 25%, 0.15);
+    
+    --sidebar-background: 38 35% 92%;
+    --sidebar-foreground: 28 20% 14%;
+    --sidebar-primary: 215 85% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 36 28% 88%;
+    --sidebar-accent-foreground: 28 20% 14%;
+    --sidebar-border: 36 22% 83%;
+    --sidebar-ring: 215 85% 28%;
+  }
+
+  .dark {
+    --background: 224 30% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 224 20% 11.5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 224 20% 11.5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 18% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 224 18% 16%;
+    --muted-foreground: 220 14% 75%;
+
+    --accent: 224 18% 17%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 224 16% 20%;
+    --input: 224 16% 20%;
+    --ring: 217 91% 60%;
+
+    /* Dark mode custom tokens */
+    --gradient-hero: none;
+    --gradient-card: none;
+    --shadow-soft: 0 4px 20px -2px hsl(0, 0%, 0%, 0.45);
+    --shadow-medium: 0 10px 40px -5px hsl(0, 0%, 0%, 0.6);
+    --shadow-strong: 0 20px 60px -10px hsl(0, 0%, 0%, 0.75);
+
+    --sidebar-background: 224 24% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 18% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 224 16% 20%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Smooth theme transitions */
+@layer utilities {
+  .theme-transition {
+    @apply transition-colors duration-300;
+  }
+  
+  /* Glassmorphism utilities */
+  .glass {
+    @apply bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm;
+  }
+
+  .no-scrollbar::-webkit-scrollbar,
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar,
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Circular View Transition for Theme Toggle */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 99999;
+}
+
+/* Lenis smooth scroll setup */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
